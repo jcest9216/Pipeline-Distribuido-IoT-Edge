@@ -1,6 +1,6 @@
 #!/bin/bash
 
-INTERFAZ="eth0"
+INTERFAZ="wg0"
 
 echo "Aplicando limitación de red (512kbit + 50ms)..."
 

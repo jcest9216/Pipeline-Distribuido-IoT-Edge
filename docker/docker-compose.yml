@@ -1,0 +1,27 @@
+services:
+  edge:
+    build: ./edge
+    container_name: edge
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    command: sleep infinity
+    restart: unless-stopped
+
+  sensor1:
+    build: ./sensor
+    container_name: sensor1
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    command: sleep infinity
+    restart: unless-stopped
+
+  sensor2:
+    build: ./sensor
+    container_name: sensor2
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    command: sleep infinity
+    restart: unless-stopped
